@@ -37,13 +37,17 @@ void input(struct Person* people, int number_of_elements) {
 }
 
 void output(struct Person* people, int number_of_elements, int h_number) {
+    int flag = 0;
     for (int i = 0; i < number_of_elements; i++) {
         if (people[i].height >= h_number) {
+            flag = 1;
             printf("%s ", people[i].first_name);
             printf("%s", people[i].last_name);
-            }
-        if (i < number_of_elements - 2) {
+            if (i < number_of_elements - 2) {
             printf(", ");
+            }
         }
+           
     }
+    if (flag == 0) printf("%s", "Nothing");
 }
