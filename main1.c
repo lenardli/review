@@ -1,12 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
-  int N;
-  char term;
+// No decomposition at all
+// all actions are in main func
 
+int main() {
+  // no init int to zero
+  int N; 
+  char term;
+  // no check on negative numbers
   if (scanf("%d%c", &N, &term) != 2 || term != '\n') {
      printf("n/a");
+    // return in c
     return 1;
   }
 
@@ -28,6 +33,7 @@ int main() {
     for (int j = 0; j < N; j++) {
       if (scanf("%d", &A[i][j]) != 1) {
         printf("n/a");
+         // return in c
         return 1;
       }
     }
@@ -36,6 +42,7 @@ int main() {
     for (int j = 0; j < N; j++) {
       if (scanf("%d", &B[i][j]) != 1) {
         printf("n/a");
+         // return in c
         return 1;
       }
     }
